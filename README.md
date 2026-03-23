@@ -26,9 +26,12 @@ Claude Code の設定ファイルです。
 
 ```bash
 git clone git@github.com:sima2/claude-code.git ~/.claude-dotfiles
-cp ~/.claude-dotfiles/settings.json ~/.claude/settings.json
-cp ~/.claude-dotfiles/statusline-command.sh ~/.claude/statusline-command.sh
-chmod +x ~/.claude/statusline-command.sh
+
+# 既存の設定をバックアップしてシンボリックリンクを作成
+cp ~/.claude/settings.json ~/.claude/settings.json.bak 2>/dev/null || true
+ln -sf ~/.claude-dotfiles/settings.json ~/.claude/settings.json
+ln -sf ~/.claude-dotfiles/statusline-command.sh ~/.claude/statusline-command.sh
+chmod +x ~/.claude-dotfiles/statusline-command.sh
 ```
 
 ## 更新
