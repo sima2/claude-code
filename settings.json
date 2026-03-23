@@ -1,0 +1,17 @@
+{
+  "extraKnownMarketplaces": {
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "discord@claude-plugins-official": true
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash /Users/simasima/.claude/statusline-command.sh"
+  }
+}
